@@ -57,7 +57,6 @@ for website in ${websites_list} ; do
             # curl -H "Content-Type: application/json" -X POST -d '{"text":"'"${domain} : ${status_code}"'"}' $url
             curl -H "Content-Type: application/json" -X POST -d "$(generate_post_data $domain $color $status_code $msg)"  $url
         else
-            curl -H "Content-Type: application/json" -X POST -d "$(generate_post_data $domain $color $status_code $msg)"  $url
             echo "${website} is running!"
         fi
 done
