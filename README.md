@@ -22,3 +22,6 @@ sudo netstat -ntlp | grep apache2
 sudo ufw allow 80/tcp
 sudo /etc/init.d/apache2 start
 ```
+
+### serverstatus - slack   
+https://www.digitalocean.com/community/tutorials/how-to-use-discord-webhooks-to-get-notifications-for-your-website-status-on-ubuntu-18-04   
