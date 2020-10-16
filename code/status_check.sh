@@ -17,7 +17,7 @@
 ##
 
 url="https://hooks.slack.com/services/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"
-websites_list="https://www.naver.com https://www.google.com https://www.daum.net"
+websites_list="https://www.naver.com https://www.google.com"
 # websites_list ="your_domain1/test your_domain2 your_domain3"
 
 
@@ -57,6 +57,7 @@ for website in ${websites_list} ; do
             # curl -H "Content-Type: application/json" -X POST -d '{"text":"'"${domain} : ${status_code}"'"}' $url
             curl -H "Content-Type: application/json" -X POST -d "$(generate_post_data ${website} $color $status_code ${website +"장애발생"})"  $url
         else
-            echo "${website} is running!"
+            # echo "${website} is running!"
+            curl -H "Content-Type: application/json" -X POST -d "$(generate_post_data ${website} $color $status_code ${website +"장애발생"})"  $url
         fi
 done
