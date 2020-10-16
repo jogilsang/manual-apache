@@ -16,8 +16,8 @@
 # List of websites to check
 ##
 
-url="https://hooks.slack.com/services/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"
-websites_list="https://www.naver.com https://www.google.com"
+url="슬랙 도메인"
+websites_list="감지할 사이트"
 # websites_list ="your_domain1/test your_domain2 your_domain3"
 
 
@@ -27,13 +27,13 @@ generate_post_data()
 {
    "attachments":[
       {
-         "fallback":"Alarm [U]: <$1|클릭 시 서버연결을 시도합니다.>",
-         "pretext":"Alarm [U]: <$1|클릭 시 서버연결을 시도합니다.>",
-         "color":"$2",
+         "fallback":"서버장애가 감지됬습니다. 시스템 확인요청드립니다.",
+         "pretext":"서버장애가 감지됬습니다. 시스템 확인요청드립니다.>",
+         "color":"$1",
          "fields":[
             {
-               "title":"$3 error",
-               "value":"$4",
+               "title":"$2 error",
+               "value":"$3",
                "short":false
             }
          ]
@@ -44,10 +44,10 @@ generate_post_data()
 EOF
 }
 
-domain="https://www.naver.com"
+# domain="https://www.naver.com"
 color="#D00000"
 status_code=""
-msg="서버장애가발생했습니다."
+# msg="서버장애가 발생했습니다."
 
 for website in ${websites_list} ; do
         status_code=$(curl --write-out %{http_code} --silent --output /dev/null -L ${website})
@@ -55,9 +55,10 @@ for website in ${websites_list} ; do
         if [[ "$status_code" -ne 200 ]] ; then
             # POST request to Discord Webhook with the domain name and the HTTP status code
             # curl -H "Content-Type: application/json" -X POST -d '{"text":"'"${domain} : ${status_code}"'"}' $url
-            curl -H "Content-Type: application/json" -X POST -d "$(generate_post_data $website $color $status_code $website)"  $url
+            curl -H "Content-Type: application/json" -X POST -d "$(generate_post_data $color $status_code $website)"  $url
+            echo
         else
-            # echo "${website} is running!"
-            curl -H "Content-Type: application/json" -X POST -d "$(generate_post_data $website $color $status_code $website)"  $url
+            echo "${website} is running!"
+            echo
         fi
 done
