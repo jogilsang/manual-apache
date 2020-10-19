@@ -8,8 +8,9 @@ https://blog.naver.com/jogilsang/222112043252
 ### 코드설정
 ```
 sudo crontab -e 
+*/5 * * * * /위치/쉘파일.sh
 sudo crontab -l
-sudo 
+sudo cat /var/log/cron | grep 쉘파일.sh
 ```
 
 ### 참조 및 출처
