@@ -5,6 +5,13 @@ bash shell script
 ### 상세내용 기재
 https://blog.naver.com/jogilsang/222112043252
 
+### 코드설정
+```
+sudo crontab -e 
+sudo crontab -l
+sudo 
+```
+
 ### 참조 및 출처
 ```
 source of cc :
