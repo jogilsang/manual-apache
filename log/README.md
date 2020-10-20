@@ -1,7 +1,7 @@
 
 
 ### access.log
-# info : https://blog.naver.com/jogilsang/222121602452
+#### info : https://blog.naver.com/jogilsang/222121602452
 ```bash
 cat /etc/apache2/apache2.conf | egrep -v "^[[:space:]]*$" | grep -v ^#   # 주석제거
 /etc/apache2/apache2.conf
