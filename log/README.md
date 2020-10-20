@@ -2,7 +2,7 @@
 
 ### access.log
 #### info : https://blog.naver.com/jogilsang/222121602452
-```bash
+```shell
 cat /etc/apache2/apache2.conf | egrep -v "^[[:space:]]*$" | grep -v ^#   # 주석제거
 /etc/apache2/apache2.conf
 ## added : LogFormat "%t \"%r\" %>s" custom
