@@ -22,3 +22,5 @@ sudo cat custom.log   # 생성된 log 확인
 "%400,501{User-agent}i"는 400 (Bad Request) 오류와 501 (Not Implemented) 오류일때만 User-agent:를 로그
 "%!200,304,302{Referer}i"는 정상적인 상태가 아닌 모든 요청에 대해 Referer:를 로그
 ```
+
+https://httpd.apache.org/docs/2.2/ko/logs.html
