@@ -10,3 +10,17 @@ https://blog.naver.com/jogilsang/222138866865
 /conf/logging.properties   
 7.x : Apache Commons Logging   
 8.x : JULI(Apache Commons Logging)   
+
+### Tomcat 로그변경
+```
+tomcat logs 디렉토리(${catalina.base}/logs)에 저장되는 로그는 아래와 같은 곳에서 설정이 가능합니다.
+
+- catalina.out 
+  ${catalina.base}/bin/catalina.sh
+
+- host-manager, localhost, manager
+  ${catalina.base}/conf/logging.properties
+
+- localhost_access_log
+  ${catalina.base}/conf/server.xml
+```
