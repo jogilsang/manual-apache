@@ -27,3 +27,13 @@ tomcat logs 디렉토리(${catalina.base}/logs)에 저장되는 로그는 아래
 - localhost_access_log
   ${catalina.base}/conf/server.xml
 ```
+
+### Tomcat 로그 주기적으로 삭제하기
+```
+CMD :
+find /TOMCAT_HOME/logs -name "localhost_access_log*.txt" -type f -mtime +10 -exec rm -f {} \;
+
+description :
+해당 경로에 10일이 지난 파일 삭제
+localhost_access_log이름으로 시작하는 확장자가 txt
+```
