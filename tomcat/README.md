@@ -11,6 +11,9 @@ https://blog.naver.com/jogilsang/222138866865
 7.x : Apache Commons Logging   
 8.x : JULI(Apache Commons Logging)   
 
+3. localhost_access_log   
+정의 : 톰캣에 액세스한 모든 것을 기록   
+
 ### Tomcat 로그변경
 ```
 tomcat logs 디렉토리(${catalina.base}/logs)에 저장되는 로그는 아래와 같은 곳에서 설정이 가능합니다.
