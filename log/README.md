@@ -7,6 +7,11 @@
 /var/log/apache2/access.log
 ```
 
+### 로그보기
+```
+sudo tail -F -n 0  /var/log/apache2/access.log
+```
+
 #### 로그정보
 #### https://blog.naver.com/jogilsang/222121602452
 ```shell
