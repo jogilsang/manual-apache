@@ -1,6 +1,12 @@
 
 
 ### access.log
+
+### 위치
+```
+/var/log/apache2/access.log
+```
+
 #### info : https://blog.naver.com/jogilsang/222121602452
 ```shell
 cat /etc/apache2/apache2.conf | egrep -v "^[[:space:]]*$" | grep -v ^#   # 주석제거
