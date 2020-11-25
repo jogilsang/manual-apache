@@ -1,4 +1,26 @@
 
+
+### Tomcat8 경로
+```
+Deploying web application directory
+
+/var/lib/tomca t8/webapps/
+
+
+
+Deployment of configuration descriptor 
+
+[/etc/tomca t8/Catalina/localhost/manager.xml]
+
+
+
+Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+
+CATALINA_BASE:         /var/lib/tomcat8
+
+CATALINA_HOME:         /usr/share/tomcat8
+```
+
 ### Tomcat 설명
 https://cassandra.tistory.com/5
 
