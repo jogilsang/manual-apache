@@ -6,6 +6,9 @@
 # Date : 10/10/2020
 ##
 
+# v1 : 단일 웹사이트 장애감지
+# v2 : 다중 웹사이트 장애감지
+
 ##
 # Discord webhook
 # Change the 'your_discord_webhook_name' with your actual Discord Webhook
